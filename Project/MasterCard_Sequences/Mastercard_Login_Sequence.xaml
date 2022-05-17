@@ -1,0 +1,291 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mastercard_Login_Sequence" this:Mastercard_Login_Sequence.In_MastercardURL="https://www.mastercardconnect.com/-/my-items" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_MastercardURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>822,1681</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mastercard_Login_Sequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="70">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mastercard_Login_Sequence" sap:VirtualizedContainerService.HintSize="625,1616" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="rparobot" Name="BotUID" />
+      <Variable x:TypeArguments="x:String" Default="C:\Program Files\RSA SecurID Software Token\securid.exe" Name="RSAGenerator" />
+      <Variable x:TypeArguments="ui:UiElement" Name="RSA_UI" />
+      <Variable x:TypeArguments="x:String" Name="TokenGenerated" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Mastercard Connect" sap:VirtualizedContainerService.HintSize="583,1281" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6184934d-4b02-4390-9687-2937a049c7b3" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="549,1065" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Sign InUser'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="507,971" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Timeout="30" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="463,755" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="421,661" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState Exists="{x:Null}" DisplayName="If Set Default is Displayed" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="379,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Version="V1">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="1892, 89, 24, 24" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Mastercard Connect - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Infobar Container' role='grouping' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Mastercard Connect - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Infobar Container' role='grouping' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="4be1760e-7327-4be3-9e15-d89ee27009ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVEhL7ZNLDsIwDAU5dSXEIaqWBah0QT9npEujF1IwEapeIsMCeVaVHWXi2t7Jj3GhOS40x4WB6zjLuevltiwx8gIx5IZpjpFtKOGpu0i1P0jdHt+k+EYMOZxhoITh4uZx8SrVMuT0Q7age5hKS2Qga2i0tEQG8oWxsrXSrwm1DJXp35sj5Ycm6VmIFUgp4XMtkp5pKXaRgRJi8SH9VAViyOEMQ9bQWOBCc1xozr8LRe5jJuweMJf0uAAAAABJRU5ErkJggg==" InformativeScreenshot="d8a0eb88568dcba649f6363d7d2cf9f3.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Mastercard Connect - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="313, 85, 106, 32" ElementType="Button" FriendlyName="'Set as default'" FullSelectorArgument="&lt;ctrl name='Mastercard Connect - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Infobar Container' role='grouping' /&gt;&lt;ctrl name='Set as default' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Mastercard Connect - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Infobar Container' role='grouping' /&gt;&lt;ctrl name='Set as default' role='push button' automationid='' check:text='Set as default' /&gt;" Guid="fd144362-be0e-420c-bc81-41ffe9b29ad8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAAkCAYAAABomA/xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPTSURBVGhD7Zu9btpQFMf7HHmB9gl4ikod2PIEbAwZMlRiCiNDVSmDtyhDhFgYIiFVSqUMZEBRFqgyhCFCDDWKi43ABkM4Ped+GNu9AYRA9Y3uX/orwvf6fpzf/XJkfwAjLWXAaaoEuB+/pvDluwOfvtpwdPLbOAMmFsSE2MQVgWu0p8objbNjYiQVgfv8zVFmNs6OiZFUBO6jWR4zb2IkFYFTZTTOnqUMOM0sZcBpZikDTjNLGXCaWcqA08xSBpxmltoruOPbGfR8USDKfR4r8/0PV+kRyPaVaQlbE+iIPjy1FOkbPYIm3b9NXTtYan/grqZAsXGfJ3B6OYTCdQBPz5saP4Rq/xWCA3Uy7m3BWX3M58+gXFGnb3YK3DXGxV9As57Ot5ul9geuNcdSFtCwFGlv+rCjM+5twW09M990qk8sLq8ZBnfuw1OIBflzqNdekmlnHtTtV14Ryu1PoHAmOhhpDtX4PehCKwSXymRaQu9xBDlKY8vZUlzHJe0ueR85V8MZL8v3Q+h4+FcGU9keAS0SBXsEP71VPirngg1M7Cv+dLsjUV/8dwwcg7bSKv/ultrrHhcPVuBMoYTBODoZ4PKzxOUwYMHJXQbQw/TeA/1Te/2My9fHULZoEAzgtLvAjBwuC7A3hSIrX2VRrhNA6fwFy+F18nrWtSc941wo37iQp3oqEwHHw+tbgqO0zM+4yC9QvJuBTTMFA5cXnUpL2cmUaSDcO7gHhnJ2cXDFNkHEMuwZVOsOn4Vx12bgYnrndnVtBWRde9Lg/oD1OMefCJpnE/neJTjuPAsuBZp3yn4cKvKtAzeGDsKnkykb8SwAcjkd4CzyoWkvWEDttpu8t07glnB/I68NAPmKeta1JwmuwPqwgPoVzXreVg4H24Yp7wNcCx8Fuj6U6URZm0CT9hRazk4cHrQQ9z4KwJkDpfYMGqwjDjQozePLVrJMEeD2EHIVl5eR3gflPvkPeA49YEulA8c3fAbyfOvakwRX6uL+FoZgVXCgiDI4HI/Xi/2j8osPczaAlODwvgAHUec2te/vaKn9gWPHXlEYKmCHlAFPs8bQdFaHCdebgXXO7zvGEcmXoRQUnCUltq+R8Dgd2+Mu6MguFEQHhqTpmZIYsDy43zajGYfpa9qTWCotHDzicBTgskzPd3KW5bF8NhhQbj/kj0IqcDS4aBCzdNofeT27WupgS6XxYSxlwGlmKQNOM0sZcJpZyoDTzFIGnGaWMuA0s5QBp5mlInDmhdjsW/lCrHkFPftWvoJuPvrIvpUffZDMZ1bZ88bPrIz0kgGnpQD+AmzP/4H3CTEcAAAAAElFTkSuQmCC" InformativeScreenshot="f9777368fd779d8db3cfd3e26d6b27eb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Mastercard Connect - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="379,51" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Text="[BotUID]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.mastercardconnect.com/-/sign-in" DesignTimeRectangle="1265, 381, 330, 42" ElementType="InputBox" FriendlyName="'INPUT ConnectInput0'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='User ID' /&gt;" Guid="55246550-5fdd-4e50-b5ef-ada9ce903b78" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAU4AAAAuCAYAAABH0PCHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQySURBVHhe7dlrThtXGIfxWWJVqYto06R8SJs2C4gUiR2E4lwhZAsIsQdAassnLg1gELZDfcNc3s7/zAw+nhkbH2RhkJ+f9EqZi8cepDycMZHFrq+vb+bq6souLy8ZhmGYeNREv5ES+bG8uLiwXq9n5+fnbrrdLsMwzExO1kE1UW30Ixpl0dTBw8MDW/700eaePrEfvv+OYRhmpkctVBPVRjUyi2ekf6iqBwcH9vL332xlecn29/bcchQAZplaqCaqjWqkWqlmRqpop9OxpY8f3AkAgEFfVj7bpw/vXSvVzEjP8q1W036Jl6SsNAGgSG1UI9VKNTNqt9t2dvbNPc8DAMqpkWqlmhm1Wi1rNBqEEwBGUCPVSjUzDmfT6vU64QSAEdRItVLNjJrN/6xWqxFOABhBjVQr1UwXztPTU8IJACOokWol4QSAMRFOAAhEOAEgEOEEgECEEwACEU4ACDTZcG4u2Ivnc+VT2UhPwlZlzubXjtKtZJufGfB4TD6cr1etmm7eWXXV5idxnQeqLJz+diYJ6oJtpdsAHgbCOQXjhlOqa68m8zMFMDFTCOeGvXv+ytbX/Mf6/qoqWWXlxn9kHfg6IL6O92YuMpVVW3+dHi/9LHr//Couty//lcPAI7PO7R8bDF7x3t5tpoc8IeG8uSblBB6MKYUzjop3XmFVNWzFqf1+4Nx2PyruOrdGJhdJx99XDFU1DmGyfeSi3I9hst2PXnpvt3w3GRbO/HsCmLbJhzNdaeWn/x+/GKbCviHhLAuMYpntS1act/1BxY9kxtuXi/GAsl8MA5+17N6KCCfwuE1pxXmXcCYBKYtyFsuJhFNyvwAGwuzt78/w1WqZsHCOd00A9+cRhTMJzKiV153D6VaZ+ZhmdH76vrq/kdcfL3Ih4XT3dOvPFMB9epjhHBagksBtVfrb44UzCZV/3uD2hm0NxNn/LCWPzfE9j/4aomjccLrPNTToAKZl8uEsPMam44Xp9nCmEbx5vReP3HvMr63ehG7ccBYe+/3Yb2q16x2LZ3CVq8/qHY9fu7456t6KysLpv9/NjHUvAO7bZMMJADOAcAJAIMIJAIEIJwAEIpwAEIhwAkAgwgkAgQgnAAQinAAQiHACQCDCCQCBCCcABCKcABCoEM5arWbPfv7J9vf20lMAABm1UY1UK104W62m1et1e/+2YivLS+lpAIDMl5XP9ray6FqpZsbhbFmj0bDt7W3748Wv7gRWngCQrDTVRLVRjVQr1cyo3W7b2dk39+z+z99/2eLCG3v25Ef3PM8wDDPLoxYu/vnGtVGNVCvVzKjb7bqlp0p6cnJiR0eH9vXrv7a/v2+7u7tudnZ2GIZhZmKy7qmBaqGaqDYmq82mqZlRr9ezTqfjvvDUAVX1+PjYqtUj94LDwwOGYZiZGrVPDVQL1US1UY1UK3u9nv0PLyn20kTqg3AAAAAASUVORK5CYII=" InformativeScreenshot="0fd761d457d18bb6c6714f2c3d5228ed.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mastercard Connect' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1265, 357, 330, 24" ElementType="Text" FriendlyName="'User ID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='User ID' check:text='User ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAU4AAAAcCAYAAAAOYlYhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHsSURBVHhe7dldasJAFIZh96ALK4XemRWUQq9K6SpmEW2lF2YjswsLmiX4Ez2dkxgzMal4iqLF94EPqgnx7mWsPQEAmBBOADAinABgRDgBwIhwAoAR4QQAI8IJAEaNcGbpUJzfvoh41+98/zQySZOhpNn2pXcyGPRbO9/nA4DNdYaz9WFeXIhnsrsJAC7HHs5sLEl0EqxjpgHsOiFq9Jy48IziWusDjgmn0udE9wHAhZjD6V0zXpn3IX3t9+vX5Wmxs4WFY8Opl8558gWA4xjDGZ8qXUhipYxjddqsVp5GyxPn770jnAD+l1Y4u/6P2Bms6kecZBzSdyiOpwqnPqd5qgWAS2iEs/z/ZTNOGtP4dJll8cVwfxHOMq5xdH1avn+acOoz+HEIwHVohlPt/fiz/5VcI1dfiyMbf40PkXNj8cW1P4Rz9/x6fEUHcC3a4QQAHEQ4AcCIcAKAEeEEACPCCQBGhBMAjAgnABgRTgAwaoVzs9kwxhiLtq8IZ3zDer2WPM8ZY4yFaRPjRhbhjGO5Wq1kuVzKYrEoNp/PGWPsJld1UJuobYwj2quiqRdns6mMPt7l+elRHu7vGGPspqct1CZqG7WRVTx7+odWdTqdytvri3yNPuV7MimOowBwy7SF2kRtozZSW5nnufwAJrT8Iu/f19wAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Generate_RSA_Token workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Project\MasterCard_Sequences\Generate_RSA_Token.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="In_RSATokenPath">[RSAGenerator]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="In_RSAPIN">1234</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_Token">[TokenGenerated]</OutArgument>
+                        <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_UIElement">[RSA_UI]</OutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InvokeWorkflowFile>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[TokenGenerated]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password /'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Text="[TokenGenerated]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.mastercardconnect.com/-/sign-in" DesignTimeRectangle="1265, 424, 330, 42" ElementType="InputBoxPassword" FriendlyName="'INPUT ConnectInput1'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Password / RSA SecurID® token' /&gt;" Guid="73dfd1d6-8fd2-4c1a-bd28-f17621d9449e" ImageBase64="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" InformativeScreenshot="86fcb34b7039c0bd63aac14e4755a946.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mastercard Connect' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1265, 400, 330, 24" ElementType="Text" FriendlyName="'Password /'" FullSelectorArgument="&lt;webctrl aaname='Password / RSA SecurID® token' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password / RSA SecurID® token' tag='LABEL' type='' check:text='Password / RSA SecurID® token' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAU4AAAAcCAYAAAAOYlYhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS3SURBVHhe7ZlRbhQxDIa5Az1e9w48IHEEJCSkkRDH6D6iqhxhDsI+lhOE2IkT2/HMNIiWLfyfNOpu4jiOZ/5/t+2bBAAAYAoYJwAATALjBACASWCcAAAwCYwTAAAmgXECAMAkME4AAJjEGOe6vE03N/5a0lrnXwdrWnLdy1bR65JuhsmyZjj76S5dagRzuUunvXnmks6nPLdZQMH3+iD8z8FnkHsan3uspZ5pN0agnLfpPDbGYuoA4HUxGqdTxOV8e2gC18W+cdIZx7loTTGLkzhANU0dw/3y5snGvOR826YwrAtyPxuBcZp9h1qe0BsDjBP8+xwaJxtBE3kRUfvmoWJ57ZPGi+haCOVXAqL4Jkieq2tbDVW0p2zoebzkUd+I2LS80AWKi0QdmUOO1h8ark6GxW/zUf20xJzDEJsO96kVoM4z1KXvQa3Hm5C+Z/z6ls2Qx46MM8Pnruv1eaSefh99L3XdMrdxFlcz55eaeU7W2JhTvr9trj0TALwsh8bZx5zgtWlooXLc/jgJU/Lw69OiRFbXVvGUcqr4VB26TiM6NrjRDBjKGYotMpCyTzc4MSwxhAiKUWa2IWw2JsoVFlnPI3N8Htmz1CRTzdi5VzvGqWs2sbFx9pg8X/Osi66hrs+5xw8Hytn3G+9NnVN1UIzvcz9+X8+vdX+j2gF4AY7/xrkh/vKAVxFooWqeML7mbxCrCJDEIPF+Lb1n0XhDs2Yyvu9ow7YUsQ5nD5I00+NLGRJBNbY1VIebN7g92zprHOY8xvQUflz3rvWtYmL9XhWJoZ910jwbskDNd9RzsXFv2r3Oe5zF/IWdermGFrt9nwF4bo5/VdfwQ60EpIxDG4o2p3icxEViyD9J4CJAZTy8ThtnE5AXzI7ROOh80fiQg/faM72KE3n0wRMbtUcZSq0lzONNRVDmwlDc1geQifW9q7R96v3hodIP08McN56Pckrvxvy0ntdwHfT6Lse42uuZ+9X37vvBOMHfY8I4vQi0QDRbD7QdZyGuWTw8UAR6dqLc+8bZ8x+9F6heJVDDKPBi+D2e3u+aRGS23tCYuA7ejwtQOT1hvowbNx86vo8mdjw3odeLUfZf1aV+6nNUp64/vjfdOEsd/ewZX68Cxgmuhd82Tn7Yq0DMg68EtTXO7/Ic/YNHhEDCpL91tt1ZWLJfEUnJNQqG99FGEZgBjw+DQmQgZZ8mVK7HGkXpgRL/IPjYmMY+l7jeCzVv+hDcA9oz6pXuh65LGZbPx5hcRHQGW6+F5nqf+Czm3tS5oQ5ZY/fTPYZxgmth6lf18hDnGBbNqh7cKtY2Zx/ucTzDwrFGOuxdTZCvJv5IMGqfHGe+uVYofyx0IjKHjBY6UU2l1dSEX/aP8hvjUPC4ymXXHvVN5mT/cr4ylus9K7N8gnHKPnINfXD1xDGCxErf7Nq2ztSR0XWaM/b+wzjBtWCMEwAAwDEwTgAAmATGCQAAk8A4AQBgEhgnAABMAuMEAIBJYJwAADAJjBMAACaBcQIAwCQwTgAAmMQY58/Hx/T94T59/vQxfXj/DhcuXLj+64u8kDyRvFHTjJMmvn5Z0sP9t3S5/KijAADw/JBJXSPkheSJ5I3dPFP6BSgG0/KrbCDqAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6184934d-4b02-4390-9687-2937a049c7b3" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.mastercardconnect.com/-/sign-in" DesignTimeRectangle="1265, 495, 100, 40" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Sign In' check:text='Sign In' /&gt;" Guid="5619e901-dc63-4aca-9e5e-def596ebd053" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAsCAYAAACJ1f3bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7ZuJTxNBGMX9z0XjkXjFIyYmKoIEVFCOgFwCQkABwxFiBIOYgGIvWnoBvTvu2/2mnb16ALNtYV7yQro7M1veb2d2Ozt7hSk1tRSgJteZAWXDPpbcmGORiQ52MPSUBfvuMf/rq5fSwd67LDT4hIVHX7DEtzGWDe5RSqfXqQAVUsfs6Ps8C/U/dPyiymUH++6zxMokK5wkKb36VBcgHCQ6/8H0BXxkf2d5m7KzEysT+sldj2oGlAnssuC7O6WD+RSQ2qzlpJ/A3N032MnOOqVaXTUBSq7PmA+qXL8tJ3R8eZSxYpESdldFQIVMikUmO00NK5/RAqjweLuecSW5A9Lo4m4EDanhTJ7DYy8r9iRXQLGvQ0YjCo48U7bI2k2OgI63lvSKqufIN7+BONpcovTNsgHKJ6PM33XN1pCyZGuZF47jRKEsG6DYQr9RQfUe70xZR+f7iUJZJkD5eFgnqYa2BlnLPhc7IBqGTIDiSyNGQQWoYY4vfyQahkyAShOdCpD3pswxdyeqBCh7sK8XME1LSDbG3GI2Td/AUF67UEYmOxzLy3AuGmJp32/HfV6bX1pyER+lIQBKrE0ZBT3qPcmNWVbM59nx9qppOwKDK5U5TzcTIJ59Yn2GqAiADqe67BUkGqFwEI10MwI6nO4mKgKgg+FnpkKyjVCqDWcYAjE9j57Et6EeF4bH9N+fpXZ4+UzwD5UwymC72K5oERDaQFuoj56r19f+iseXaT7EhUef68eGSoBC7x/YKsg0D4PLqTdZAWGoEwPnQ6AICPtF8NVOBCdA4jGsx5RqAoQHoVwlQP6u66ZCXpoHzcWvOSIgHp71eoTPIiBrj3PaJtoJkHgMt+NKMWUf6LlFSQiAAj037RUaYPGMF8N1Cxqf84nDiw8o1P/IVKhRdusRbkG5lef7WwkQvwaFBh4TFQEQf/bjFSAEA4vbECbGex6YNVyEVO0a1MqAePaR8XaiIgCKfn5rKiTTPEwEY5UYhFO42M+lw3S4i2t1QNG5XvoPBUBY24adrTZRinCtPbFlTdljSRtXCVAu4rdXaDLjLBbPZPQK9CK33tFqLk31RINERQAEYaLOWqmZDBAYbri8/BHplTFhLcoEKLY4rBdqtWHuQpgyr/i4wRjL2xSgRhiZ44FdPEI0DJkAQbwXKXtva++BbICKmRQLvLnt2ICyBNNohdkDZG+VDRCU2tvUK3n58O6ymmec2tui9M1yBAQlVj+VG1DXJKlOrk9T6na5AsJy1MjEK6MRBUiasfb9VEt/IevieTXkna+xeB4/tCupIiBdGt3E2rTWYJveqLoFP73F7GJfBrUeUKCQ3VUdECm9/6t8d8cXNypYNdl6Uh9tLlKq1VUzIAjrtsMjtHaBjGFP3Uhotvz/gGIFg8tF7jBAadamugDp0oa89L8dFlsYUL+XajSetaX3tynA+lQ/IIuM1/Bn1Wv4msXX8PHOT2r3R9U36KrpzICU5EoBamox9h8qWybaueFZRwAAAABJRU5ErkJggg==" InformativeScreenshot="0529982daedd1cb455fa8c0f94c15544.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mastercard Connect' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mastercardconnect.com/-/sign-in" DesignTimeRectangle="1265, 316, 330, 281" FriendlyName="'Sign InUser'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='Main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='Main' tag='DIV' check:text='Sign InUser ID Password / RSA SecurID® token Sign In' /&gt;" Guid="814b2a43-cec8-4c7f-b099-71ee20413a2f" ImageBase64="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" InformativeScreenshot="f6c0db3cfcf6a23bf3a13484edf5e415.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mastercard Connect' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="fa1612f69f3e69e930174a98e8802b04.png" Selector="&lt;html app='chrome.exe' /&gt;" Url="[In_MastercardURL]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Application: FBN BOT - RSA SecurID Token" sap:VirtualizedContainerService.HintSize="583,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="c4c9be06-badf-47e0-b490-aa3aef4e8e01" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NClick ClickType="Single" DisplayName="Click 'Close button'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c4c9be06-badf-47e0-b490-aa3aef4e8e01" Version="V1">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="400, 10, 17, 15" FriendlyName="'Close button'" FullSelectorArgument="&lt;ctrl name='Close button' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close button' role='client' automationid='' check:text='Close button' /&gt;" Guid="6b173258-ae0b-4647-9207-d9180402f97c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAATCAYAAAB/TkaLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARQSURBVDhPVZTrT1N3HMb5J3aLS5aRLVn2YtleGOOyZM5FMpQ4djF7sZk5RG4LTGAkFBSK0EJbaKFQoTdoobRyK7RcBAqDcm2hgHLHqKO0FLJ/4tnzO1jQF598z/mdc57zvSfYFiMQWOYjMM5F0Dh7gHpSO3MADVERcV3HM8NsRMLM9yykld+00rbNRWnPSLDOH0DQzI+ahJg/DBVRTIehpK0mWorWEyOfCyxvwB+8wjxzQoIQEqim/4Vs9BlKPRuQ96xA7gygvHMRFY+WUMX7yu4Q5K4g7jvEeZBnq9AMbkM7/gJVk/u4NxE+ExWhClS+51B7N1DmWECeYRTp6gGk1biRWTeE7PphMoJ0jRd/VPfjdq0XGc2TyHYso8CzDYXvJfRTB2eilf59CAzju1B0L0uC53+txntfZePdL7Noc/D5DTlSCq34NPWedHbuUh4Sr5bguyI76oZ20Ty1D5M/noIDJFTPMG+kaWwHFQz5UqYe577OhW9nD77dPYzTvn0hHYnJRXjrfJp07l3fhCu0is9u6vCbegTmeD5pW4RoA0MXPPTtobo3hI+/L4dnfQNDG1sY2dzG460djG3v4p2LmRjb2eWzTXQuhaD2jKG03Y1v8m2wLRzCyqo3i4L6KWqcY0UF/zxn4teRxJA+ul6G3rWncD9Zl0TEDwT9vO+g4IOuQWTVt+HH+10oNPvRQVHLbBQ6CqqnKWpjOwkUEy9Q6N1CgTOIb/OMSLxWKgn3vaJ79YkkqBoYxZ96O27IuyGzzcK+dIQGelkxFYFyKowqFiyhbS7M5g1DM0lPvU9RwheztIO4eEuDD5NlFFuDc3mFjR6AdngCJfY+pMg6kWvyQ7cQg2buEDp62eKP4gFFa4SncVHD+B6UPSH8xepfuFmD9y/flTx00Dv92JQUsszeiwKTC7lNHbhS2I47jROMMgorRUWhKiiqkkQZukBUv6oriMs5BnyQVHQqKMK92+Jkj1qQpjYjvdaKDG0rshtsknAmhcVommeiaKLwQ9GncdHmiWdQu1fxyc8KOEMrfGkB5U4PbqstSC2uQ45uGCl/q/FDsRY/ldbjl7JGpKnMuFbcCfs8q09vTWwp0+ui5umXaOAApFa48UWagUXoxe/KFlwtUCGfKdG6Q8jWDSEpV4kruQok59dQ1ANZ6ywcizEumJMUSM0fF1VO70POyajlIGQ0+nC9xIVbNf2Sh7W9yxhZ/w9VrgDucFSztRxd/qCS9+3Lx9DTUzkn6lTUxh4ViAFoWwijnWvQGYiiJxRD/9oRPGvHGCB9K0en9Kwew75yDEMwBi17tImhG5nTU1ELBQWiV+20du7IjgCFg1E8WjqUcC3F4AjEYKJH9RSpZcWbRMMzbJvIJ0MXuTwRZU6bKSQQe1RDxA6tIWKnajkheiLGz0jie9PKa0F8pwrv4kiFEltdEBcS214sZT1fNtCKBWEiYllYX+ONRS2eS4jqR/A/sPWv5BJ5yGEAAAAASUVORK5CYII=" InformativeScreenshot="b9e2181026c3a13fd0c6db4b48704b19.png" ScopeSelectorArgument="&lt;wnd aaname='FBN BOT - RSA Secure ID Token' app='securid.exe' cls='QWidget' title='FBN BOT - RSA SecurID Token' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+            </uix:NClick.Target>
+          </uix:NClick>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="739, 405, 441, 267" FilePath="[RSAGenerator]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL9SURBVFhH7VRJaBRBFB1ccAEXUMQsUzVJRqMGu7rTRiKKOQiC4IJo0IAiHvTiSU8GFzwpCB4UDx4ighcRJAE9iBIQBIlRT4qCoAaEEDLT3THRuOv43u+aOImJmJOXfvDp+a9evf9rm1SCBAkSJPjvCLTZLqG8HYFyd0pkzMZ8be0cKxmFoNJUhMocCLU5FWn3aJhxduXTXrkd/gNDZf7CfMbdlqtyljKPqn1FDxkkQuUOhdr9gMKfbXyB+TDiLgqttTIBdJugf4hvAWOfRK/NN2gfhzV1aSsbBWhOQDsYaPf+28rGWQPa8dDwKjsspgUY9MLoWKidI3GYq+QxKeyv9LKiQwFoAsu3BtpbnlMr6wNljkPfFmRXzxXDEvRVO4swJx/XkGghX0ilpoiAiA3NA5uOANxhGUMB5nnlbYhNTKcI/gFxc7JbXWj6J+Y+Kfj+dDscIxa43dweSwnANdsGzjDnGfJ4JDLuvsHyhgUinAD0g7YHC/nO3YLfHfpFaWeLlcSwq3rEzqKMp3E+W3kMKJzjOXObrRRNmYPkpDFsLQpcwnd/IZudYSUj4OW0i+tgzqZt3i6CIooN8Hde+8tKCgSRMntEVIIo4xoUPoctfR3PFdN7uQp3iZUIsIDb8bi3m/mANvPh3Yd5P1hHRESxgR7dNFNyZU5b7rwIJgBXHej6Rhjeop4FC6nmqRzDTq63Hs+LvgQaPym8ci9b6ncDvWX+bOZ4p/N4duA+4rtCRH8B7wKaiGDa368bFpNDfp2+eWUOichC/kO0+56BHckIaTvqLjZA8FxtYzcsJU8HXAtXZykB/2Tii+Y+K6Sapr1L+zWYN1zaUCngcZHe0LcWCTRgXpQ2wAsJrotjeH57yfEyipaTeb7KvYJox++vjKKO9yPWmTbmY4FXsE48tHk1oJwqPrcOnvvY9xmmTR1MOhEXmPNZ8Qmh2DV0/xTxBnNf4os74K2hhveCjYG7yctKbjxg/CwXESlns6UmBxbKKb9svH+/BAkSJJgcUqlflx+0ZQi7gw8AAAAASUVORK5CYII=" InformativeScreenshot="34a9f99fa37d03dec942d71d2670158b.png" Selector="&lt;wnd aaname='*RSA Secure ID Token' app='securid.exe' cls='QWidget' title='*RSA SecurID Token' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Operational_Module workflow" sap:VirtualizedContainerService.HintSize="583,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Project\MasterCard_Sequences\Operational_Module.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_MastercardURL">[In_MastercardURL]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
